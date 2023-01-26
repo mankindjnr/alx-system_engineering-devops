@@ -1,0 +1,1 @@
+loops, parsing, in bash
