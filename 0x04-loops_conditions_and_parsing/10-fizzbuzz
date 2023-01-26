@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+#fizzbuzz output on multiples
+
+counter=1;
+
+while [ $counter -lt 101 ]
+do
+    if (( counter % 3 == 0 && counter % 5 == 0))
+    then
+	echo "FizzBuzz"
+    elif (( counter % 3 == 0 ))
+    then
+	echo "Fizz"
+    elif (( counter % 5 == 0 ))
+    then
+	 echo "Buzz"
+    else
+	echo "$counter"
+    fi
+   ((counter++))
+done
