@@ -7,7 +7,7 @@ until [ $counter -gt 9 ]
 do
     echo "Best School"
     if [[ $counter = 8 ]]; then
-	echo "hi"
+	echo "Hi"
     fi
     ((counter++))
 done
