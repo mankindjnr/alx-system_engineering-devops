@@ -4,7 +4,7 @@
 
 counter=0
 
-until [ $counter -gt 9 ]
+while [ $counter -lt 10 ]
 do
     echo "Best School"
     if [ $counter -eq 8 ]
