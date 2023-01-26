@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#use untill loop to print the text 10 times and an if
+
+counter=0
+
+until [ $counter -gt 9 ]
+do
+    echo "Best School"
+    if [ $counter -eq 8 ]
+    then
+        echo "Hi"
+    fi
+    ((counter++))
+done
