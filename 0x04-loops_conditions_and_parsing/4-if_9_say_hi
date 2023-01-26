@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #use untill loop to print the text 10 times and an if
+#to print hi when counter hits 9
 
 counter=0
 
