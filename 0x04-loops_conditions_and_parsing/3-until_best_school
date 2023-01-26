@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#use untill loop to print the text 10 times
+
+counter=0
+
+until [ $counter -gt 9 ]
+do
+	echo "Best School"
+	((counter++))
+done
