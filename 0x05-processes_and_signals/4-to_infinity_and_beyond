@@ -3,8 +3,5 @@
 while((1))
 do
     echo "To infinity and beyond"
-    while((1))
-    do
-	sleep 2
-    done
+    sleep 2
 done
