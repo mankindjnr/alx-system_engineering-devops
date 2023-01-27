@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#filtering output of the 1st file command to print those
+#wioth bash in them
+ps -ufx > new && awk '/bash/ {print}' new

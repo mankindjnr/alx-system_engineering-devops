@@ -1,0 +1,23 @@
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root      5751  0.0  0.0   7352  4092 pts/5    Ss   00:48   0:00 /bin/bash
+root      5768  0.0  0.2 218840 33256 pts/5    Tl   00:49   0:00  \_ emacs README.md
+root      5782  0.0  0.2 218908 33352 pts/5    Tl   00:54   0:00  \_ emacs 0-what-is-my-pid
+root      5788  0.0  0.2 219572 34208 pts/5    Tl   00:55   0:00  \_ emacs 0-what-is-my-pid
+root      5820  0.0  0.2 218976 33556 pts/5    Tl   01:03   0:00  \_ emacs 1-list_your_processes
+root      5844  0.0  0.2 219436 34040 pts/5    Tl   01:05   0:00  \_ emacs 1-list_your_processes
+root      5910  0.0  0.0   9132  3360 pts/5    R+   01:20   0:00  \_ ps -ufx
+root      4305  0.0  0.0   7240  3424 pts/4    Ss+  Jan26   0:00 /bin/bash
+root      3886  0.0  0.0   7352  3372 pts/3    Ss+  Jan24   0:00 /bin/bash
+root      3898  0.0  0.1 220976 22352 pts/3    Tl   Jan24   0:00  \_ emacs 3-quick_sort.c
+root      2756  0.0  0.0   7352  3540 pts/2    Ss   Jan22   0:00 /bin/bash
+root      2773  0.0  0.1 220580 22216 pts/2    Tl   Jan22   0:00  \_ emacs print_array.c
+root      2779  0.0  0.1 220500 22280 pts/2    Tl   Jan22   0:00  \_ emacs print_list.c
+root      2785  0.0  0.1 221288 22236 pts/2    Tl   Jan22   0:01  \_ emacs sort.h
+root      2797  0.0  0.1 220632 22016 pts/2    Tl   Jan23   0:00  \_ emacs 0-main.c
+root      2803  0.0  0.1 221284 22400 pts/2    Tl   Jan23   0:02  \_ emacs 0-bubble_sort.c
+root      2829  0.0  0.1 221172 22228 pts/2    Tl   Jan23   0:00  \_ emacs sort.h
+root      2847  0.0  0.1 220924 22180 pts/2    Sl+  Jan23   0:00  \_ emacs 0-bubble_sort.c
+root      1918  0.0  0.0   7344  3480 pts/1    Ss+  Jan15   0:00 /bin/bash
+root       661  0.0  0.0   7240  3352 pts/0    Ss+  Jan10   0:00 /bin/bash
+root         1  0.0  0.0   6976  3168 ?        Ss   Jan09   0:00 /bin/bash /etc/sandbox_run.sh
+root         8  0.0  0.0  12176  5932 ?        S    Jan09   0:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
