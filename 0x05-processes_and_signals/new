@@ -6,8 +6,7 @@ root      5788  0.0  0.2 219572 34208 pts/5    Tl   00:55   0:00  \_ emacs 0-wha
 root      5820  0.0  0.2 218976 33556 pts/5    Tl   01:03   0:00  \_ emacs 1-list_your_processes
 root      5844  0.0  0.2 219436 34040 pts/5    Tl   01:05   0:00  \_ emacs 1-list_your_processes
 root      5957  0.0  0.2 219196 34016 pts/5    Tl   02:07   0:00  \_ emacs 2-show_your_bash_pid
-root      5984  0.0  0.0   6976  3540 pts/5    S+   02:14   0:00  \_ bash ./2-show_your_bash_pid
-root      5985  0.0  0.0   9132  3360 pts/5    R+   02:14   0:00      \_ ps -ufx
+root      6007  0.0  0.0   9132  3368 pts/5    R+   02:21   0:00  \_ ps -ufx
 root      4305  0.0  0.0   7240  3424 pts/4    Ss+  Jan26   0:00 /bin/bash
 root      3886  0.0  0.0   7352  3372 pts/3    Ss+  Jan24   0:00 /bin/bash
 root      3898  0.0  0.1 220976 22352 pts/3    Tl   Jan24   0:00  \_ emacs 3-quick_sort.c
