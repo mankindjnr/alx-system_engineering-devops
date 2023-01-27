@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #filtering output of the 1st file command to print those
-#wioth bash in them
+# shellcheck disable=SC2009
 ps -ufx > new && awk '/bash/ {print}' new
