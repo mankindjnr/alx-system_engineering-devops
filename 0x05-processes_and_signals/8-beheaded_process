@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #mafia boss
 pid=$(pgrep -f ./7-highlander)
-kill -SIGKILL "$pid"
+kill -9 "$pid"
