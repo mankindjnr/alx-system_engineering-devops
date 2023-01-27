@@ -2,7 +2,7 @@
 #infine loop with sleeps
 while((1))
 do
-    echo "to infinity and beyond"
+    echo "To infinity and beyond"
     while((1))
     do
 	sleep 2
