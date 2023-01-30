@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# reading the output and filtering it
+
+IFS=":"
+while read -r username userid groupid gecos homedir shell password
+do
+    printf "the user $username is part of the $groupid gang, lives in"
+    printf " $homedir and rides $shell. $userid place is protected by the "
+    printf "passcode $passwd, more infor about the user here: $userid\n"
+done < /etc/passwd
