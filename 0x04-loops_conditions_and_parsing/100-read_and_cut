@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# reading the output and filtering it
+
+while read -r line; do
+    printf "$(echo $line | cut -d':' -f1):$(echo $line | cut -d':' -f3):$(echo $line | cut -d':' -f6)\n"
+done < /etc/passwd
