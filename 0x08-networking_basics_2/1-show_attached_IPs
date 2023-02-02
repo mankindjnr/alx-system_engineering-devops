@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# display all active IPv4 IPS on the machine its executed on
+ifconfig | grep -oE 'inet [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'\
+    | awk '{print $2}'
