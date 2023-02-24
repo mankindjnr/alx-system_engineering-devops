@@ -54,3 +54,13 @@ SERVER COMMUNICATIONS WITH USER COMPUTER:
        (when  HTTP request is sent, TCP is used to establish a connection between
        the two devices and ensures data istransmitted reliably)
 
+       DOMAIN NAME SYSTEMS  a system that translates domain names into ip addresses
+       allowinmg the user's computer to connect to the right server to retrieve
+       the requested content
+
+       SECURE SOCKETS LAYER OR TRANSPORT LAYER SECURITY a protocol used to encrypt
+       and secure data transmitted between the server and the user's computer.
+
+       JAVASCRIPT and other client side technologies used to enhance the user
+       experiene and provide interactive features such as dropdowns menus, pop-up
+       and the like
