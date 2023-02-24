@@ -1,0 +1,56 @@
+SERVER:
+	a server is a piece of a computer hardware or software that provides
+	  functionality for other programs or devices, called clients.
+
+	  This architecture is called the client-server model. Servers can
+	  provide various functionalities, often called services.A single
+	  server can serve multiple clients and a single client can use multiple
+	  servers
+
+ROLE OF THE DOMAIN NAME:
+     The role of a domain name is to provide an easily recognizable name
+     for the user to identify and  access a particular website or online service
+
+     A domain name is the physical name of a website.
+     There cannot be two identical domain names
+
+     A domain name is unique identifiesr that represents an internet resource.
+     could be a website or email.
+
+DNS RECORD:
+    A DNS RECORD is type of data stored in the DNS that maps a domain name to
+    specific IP address.
+    DNS records are used by DNS servers to translate human-readable domain names
+    into machine-readabe IP addresses that can be used to locate web servers.
+
+    WWW
+	www is a hostname indicating world wide web.
+	it is associated with the DNS RECORD type CNAME(canonical Name)
+	THE cname RECORD WOULD POINT OT THE DOMAIN NAME OR IP of the
+	web server that hosts the website content of the www hostname.
+
+ROLE OF THE WEB SERVER:
+     a software that delivers webpages.
+     it only handles HTTP protocol. when it receives a HTTP request it responds
+     with i.e html page or image
+
+ROLE OF THE APPLICATION SERVER:
+     an application seerver serves business logic to application programs
+     through any number of protocols.
+
+ROLE DATABASE:
+    (a software) is to store, organize and manage large amounts of data in a structured
+     and efficient
+     its primary role is to provide a reliable way to store and
+     retrieve data for use by other softwarte applications
+
+SERVER COMMUNICATIONS WITH USER COMPUTER:
+       variety of protocols and tech.
+       HTTP - is the primary protocol used to transfer data between the server
+       and the user's computer.
+
+       TRANSMISSION CONTROL PROTOCOL(TCP)is the protocol used to establish and
+       maintain a reliable connection between the server and the user's computer
+       (when  HTTP request is sent, TCP is used to establish a connection between
+       the two devices and ensures data istransmitted reliably)
+
