@@ -1,0 +1,19 @@
+Domain Name System (DNS) Resolution:
+When the user types in www.foobar.com in their web browser, the request first goes to a DNS server to resolve the domain name to an IP address. In this case, the DNS server returns the IP address 8.8.8.8, which is the IP address of our server.
+
+Request Sent to the Server:
+The web browser then sends a request to the server at the IP address 8.8.8.8, asking for the content of the www.foobar.com website.
+
+Nginx Web Server:
+The request is received by Nginx, which is installed on the server as the web server. Nginx is responsible for processing the request and serving the appropriate response. In this case, it will route the request to the application server.
+
+Application Server:
+The request is received by the application server, which is responsible for generating the dynamic content of the website. Our code base is hosted on the application server, and it generates the HTML, CSS, and JavaScript that make up the website. The application server communicates with the MySQL database to retrieve and store data as necessary.
+
+MySQL Database:
+The MySQL database is used to store data for the website. It is installed on the server and is accessible by the application server. The database stores user information, product information, and any other data necessary for the website to function properly.
+
+Response Sent Back to the User:
+Once the application server has generated the appropriate response, it sends it back to Nginx. Nginx then sends the response back to the user's web browser, which displays the website.
+
+In summary, the user accesses the website at www.foobar.com, and the request is handled by Nginx, which forwards it to the application server. The application server generates the dynamic content of the website and communicates with the MySQL database as necessary. The response is then sent back to Nginx and ultimately to the user's web browser.
