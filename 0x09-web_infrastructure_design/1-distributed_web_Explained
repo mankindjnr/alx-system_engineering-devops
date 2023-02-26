@@ -1,0 +1,42 @@
+WEB SERVER:
+    runs nginx web server software
+    	 hosts static content such as images, CSS and javscript
+	 no application logic is applied here
+
+APPLICATION SERVER:
+	    runs your application code, PHP, NODEJS RUBY etc
+	    executes application logic and generates dynamic content
+	    connects to MySQL database to read and write data
+
+DATABASE SERVER(MYSQL):
+		runs mysql database software
+		stores and manages the website's data
+		provides data access and persistence for the application serveer
+
+LOAD BALANCER:
+		sits infront of the web and application servers
+		distributes incoming traffic evenly accross the servers
+		monitors server health and automatically removes unhealthy
+			 servers from the pool
+		provides a single entry point for client requests to the website
+
+		the distribution helps improve performance and availability
+
+CODEBASE:
+		to deploy your codebase to the application server, you can use a
+		version control system(i.e GIT) to mange your codebase and deploy
+		changes to the server vis SSH or use a deployment automation tool
+		to manage the deployment process
+
+TRAFFIC MANAGEMENT AND FLOW:
+		 a client requests a page (www.foobar.com)
+		 the request is routed to the load balancer
+		 the load balancer selects a healthy server from the pool(either
+		     web or application server) and forward the request to it
+		 The web server serves the static content directly to the user
+		     or forwards the request to the application server for
+		     dynamic content
+		 The application server generates a response by executing logic,
+		     connecting to the mysql database and rendering the output html
+		     --the response is sent back through the load balance to the
+		     --client
