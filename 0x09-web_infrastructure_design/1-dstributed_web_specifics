@@ -1,0 +1,57 @@
+WHICH ALGORITHM:
+	LEAST CONNECTION WITH DYNAMIC WEIGHTING:
+	      it keeps track of the number of active connections for each server
+	      assigning a weight to each server based on this number.The server
+	      with the least number of active connections is assigned the highest
+	      weight, while the server with the most connections is assigned the
+	      lowest weight.
+	      this ensures that the load is spread out evenly among all servers,
+	      while taking into consideration their current load.
+	      Its more efficient than most algorithms.
+
+	      servers with fewest connections(active) receives the highest weight
+	      servers with highest loads or lower health receive lower weights.
+	      	      ensuring traffic is distributed to the healthiest server
+		      with most available resources.
+
+		      WEIGHT - load capacity
+		      load balaner can use the weight to determine how many
+		      requests to sent each server.
+
+ACTIVE-ACTIVE ACTIVE-PASSIVE
+	      due to the algorithm we are using, our load balancer enables
+	      active-active setup, where all servers in the pool are active and
+	      processing requests at the same time.
+
+	      in an active-active, the load balancer distributes incoming
+	      requests to all active servers based on the current number of
+	      connections to each server. The server with the least active
+	      connections receives the highest weight and thus most requests.
+	      servers with more active connections receive lower weights and
+	      fewer requests.
+
+	      in active-passive setup - there is one active server processing
+	      requests and one or more passive servers are on standby, ready
+	      to take to take over in the event of a failure or outage. in such
+	      a scenario the load balancer would use a failover algorithm to
+	      redirect traffic to the passive server if the active one becomes
+	      unavailable.
+
+HOW DOES A DATABASE PRIMARY REPLICA (MASSTER SLAVE) CLUSTER WORK:
+    	     In a database primary replica cluster, there is one primary node
+	     and one or more replica nodes. The primary node is responsible for
+	     processing write requests, while the replica nodes are responsible
+	     for replicating the primary node's data and processing read requests.
+
+	     When a write request is received by the primary node, it updates
+	     its own copy of the database and then broadcasts the changes to all
+	     replica nodes. The replica nodes then apply the changes to their
+	     own copies of the database, ensuring that they stay in sync with
+	     the primary node.
+
+	     When a read request is received by any node in the cluster, it
+	     can be processed by either the primary node or one of the replica
+	     nodes. If the request is a read-only operation, the node can simply
+	     read the data from its own copy of the database. However, if the
+	     request is a write operation, it must be processed by the primary
+	     node and then replicated to the replica nodes.
