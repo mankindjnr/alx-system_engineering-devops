@@ -1,4 +1,0 @@
-# Configuration file edit
-Host 54.87.211.45
-    User ubuntu
-    IdentityFile ~/.ssh/school
