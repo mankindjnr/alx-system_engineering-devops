@@ -17,3 +17,4 @@ ADD301_REDIRECT="
 sudo bash -c "echo '$ADD301_REDIRECT' >> /etc/nginx/sites-available/default"
 
 # Restart Nginx to apply the
+sudo service nginx restart
