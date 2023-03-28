@@ -1,17 +1,8 @@
 #!/usr/bin/env bash
+#Editing the default config file
 
-# Define the path to the NGINX configuration file
-config_file="/etc/nginx/sites-available/default"
+sudo apt-get -y update
+sudo apt-get -y install nginx
 
-# Define the path and content of the location directive to be added
-location_path="/redirect_me"
-location_content="return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;"
-
-# Check if the location directive already exists in the configuration file
-if grep -q "$location_path" "$config_file"; then
-    echo "Location directive already exists in NGINX configuration file. Skipping..."
-else
-    # Append the location directive to the end of the server block in the configuration file
-    sudo sed -i "/server_name _;/a \    location $location_path {\n        $location_content\n    }" "$config_file"
-    echo "Added new location directive to NGINX configuration file."
-fi
+sudo sed -i '/server_name _;/a \	location /redirect_me {\n		return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n	}' /etc/nginx/sites-available/default
+sudo service nginx restart
