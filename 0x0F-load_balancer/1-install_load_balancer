@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Installing a and configuring a HAproxy loadbalancer-01 server
+
+sudo apt-get update
+sudo apt-get install haproxy -y
+sudo tee -a /etc/haproxy/haproxy.cfg > /dev/null <<EOT
+
+frontend http-in
+        bind *:80
+        default_backend servers
+
+
+backend servers
+        balance roundrobin
+        server web-01 100.26.230.92:80 check
+        server web-02 107.22.142.247:80 check
+EOT
+
+sudo /etc/init.d/haproxy start
+sudo update-rc.d haproxy defaults
+
+sudo /etc/init.d/haproxy reload
