@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
-#this is a script, it create symbolic link to connect config files
+#this script deletes a the default file in sites enabled since its not listenin
+#to port 80 and then copy the sites available default file onto the
+#sites enabled default file so that they both point to listen to port 80
 
-sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-
-sudo service nginx restart
+rm /etc/nginx/sites-enabled/default
+cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx start
