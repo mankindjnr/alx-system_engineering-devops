@@ -5,10 +5,15 @@ Python script that, using this REST API, for a given employee ID,
 """
 
 import requests
-from sys import argv
+import sys
 
-if __name__ == "__main__":
-    param = argv[1]
+
+def gather_data(param):
+    """
+    Write a Python script that, using this REST API
+    for a given employee ID, returns information about his/her
+    TODO list progress.
+    """
     user_url = f"https://jsonplaceholder.typicode.com/users/{param}"
     task_url = "https://jsonplaceholder.typicode.com/todos/"
 
@@ -37,3 +42,7 @@ if __name__ == "__main__":
         if dicts.get("userId") == int(param) and dicts.get(
                 "completed") is True:
             print("\t ", dicts.get("title"))
+
+
+if __name__ == "__main__":
+    gather_data(sys.argv[1])
