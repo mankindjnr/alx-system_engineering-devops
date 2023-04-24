@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Python script that, using this REST API, for a given employee ID,
- returns information about his/her TODO list progress.
+returns information about his/her TODO list progress.
 """
 
 import requests
@@ -27,6 +27,9 @@ def gather_data(param):
     completed_tasks = 0
 
     for my_dicts in task_resp:
+        """
+        looping throught the dictionary
+        """
         if my_dicts.get("userId") == int(param):
             tasks += 1
             if my_dicts.get("completed") is True:
@@ -36,6 +39,9 @@ def gather_data(param):
     print(f"Employee {name} is done with tasks({completed_tasks}/{tasks}):")
 
     for dicts in task_resp:
+        """
+        another loop in the dictoanry json response
+        """
         if dicts.get("userId") == int(param) and dicts.get(
                 "completed") is True:
             print("\t ", dicts.get("title"))
