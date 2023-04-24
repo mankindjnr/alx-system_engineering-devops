@@ -14,7 +14,7 @@ def gather_data(param):
     for a given employee ID, returns information about his/her
     TODO list progress.
     """
-    user_url = f"https://jsonplaceholder.typicode.com/users/{param}"
+    user_url = "https://jsonplaceholder.typicode.com/users/{}".format(param)
     task_url = "https://jsonplaceholder.typicode.com/todos/"
 
     user_response = requests.get(user_url)
@@ -36,7 +36,7 @@ def gather_data(param):
                 completed_tasks += 1
 
     name = user_resp["name"]
-    print(f"Employee {name} is done with tasks({completed_tasks}/{tasks}):")
+    print("Employee {} is done with tasks({completed_tasks}/{tasks}):".format(name)
 
     for dicts in task_resp:
         """
