@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 Python script that, using this REST API, for a given employee ID,
 returns information about his/her TODO list progress.
@@ -14,7 +14,7 @@ def gather_data(param):
     for a given employee ID, returns information about his/her
     TODO list progress.
     """
-    user_url = "https://jsonplaceholder.typicode.com/users/{}".format(param)
+    user_url = f"https://jsonplaceholder.typicode.com/users/{param}"
     task_url = "https://jsonplaceholder.typicode.com/todos/"
 
     user_response = requests.get(user_url)
@@ -26,21 +26,21 @@ def gather_data(param):
     tasks = 0
     completed_tasks = 0
 
-    for my_dicts in task_resp:
+    for my_dict in task_resp:
         """
-        looping throught the dictionary
+        Looping through the dictionary.
         """
-        if my_dicts.get("userId") == int(param):
+        if my_dict.get("userId") == int(param):
             tasks += 1
-            if my_dicts.get("completed") is True:
+            if my_dict.get("completed") is True:
                 completed_tasks += 1
 
     name = user_resp["name"]
-    print("Employee {} is done with tasks({completed_tasks}/{tasks}):".format(name)
+    print(f"Employee {name} is done with tasks ({completed_tasks}/{tasks}):")
 
     for dicts in task_resp:
         """
-        another loop in the dictoanry json response
+        Another loop in the dictionary JSON response.
         """
         if dicts.get("userId") == int(param) and dicts.get(
                 "completed") is True:
