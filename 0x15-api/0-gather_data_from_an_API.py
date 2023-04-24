@@ -5,15 +5,12 @@ Python script that, using this REST API, for a given employee ID,
 """
 
 import requests
-import sys
+from sys import argv
 
 if __name__ == "__main__":
-    """
-    script that displays an employee todo tasks and completed
-    """
-    param = sys.argv[1]
+    param = argv[1]
     user_url = f"https://jsonplaceholder.typicode.com/users/{param}"
-    task_url = f"https://jsonplaceholder.typicode.com/todos/"
+    task_url = "https://jsonplaceholder.typicode.com/todos/"
 
     user_response = requests.get(user_url)
     task_response = requests.get(task_url)
