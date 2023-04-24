@@ -23,11 +23,9 @@ def gather_data(param):
     user_resp = user_response.json()
     task_resp = task_response.json()
 
-    # counting the tasks of userid given in the command_line
     tasks = 0
     completed_tasks = 0
 
-    # looping a list of dictionaries
     for my_dicts in task_resp:
         if my_dicts.get("userId") == int(param):
             tasks += 1
@@ -37,7 +35,6 @@ def gather_data(param):
     name = user_resp["name"]
     print(f"Employee {name} is done with tasks({completed_tasks}/{tasks}):")
 
-    # looping a list of and printing only the tasks done
     for dicts in task_resp:
         if dicts.get("userId") == int(param) and dicts.get(
                 "completed") is True:
