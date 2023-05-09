@@ -17,9 +17,10 @@ def number_of_subscribers(subreddit):
     """
     baseurl = f"https://www.reddit.com/r/{subreddit}/about.json"
     headers = {'User-Agent': 'myBot/0.0.1'}
-    try:
-        resp = requests.get(baseurl, headers=headers, allow_redirects=False)
-        data = resp.json()
+
+    resp = requests.get(baseurl, headers=headers, allow_redirects=False)
+    data = resp.json()
+    if resp.status_code == 200:
         return data['data']['subscribers']
-    except requests.exceptions.HTTPError:
+    else:
         return 0
