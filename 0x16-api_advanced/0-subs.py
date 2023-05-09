@@ -15,7 +15,6 @@ def number_of_subscribers(subreddit):
     for a given subreddit. If an invalid subreddit is given, the
     function should return 0.
     """
-    #baseurl = f"https://www.reddit.com/r/{subreddit}/about.json"
     baseurl = "https://api.reddit.com/r/{}/about/".format(subreddit)
     headers = {'User-Agent': 'myBot/0.0.1'}
 
