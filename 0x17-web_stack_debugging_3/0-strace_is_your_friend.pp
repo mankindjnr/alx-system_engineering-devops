@@ -2,9 +2,9 @@
 # Once you find the issue, fix it and then automate it using Puppet
 # (instead of using Bash as you were previously doing).
 
-$path = '/var/www/html/wp-settings.php'
+$path_file = '/var/www/html/wp-settings.php'
 
 exec { 'replace_line':
-  command => "sed -i 's/phpp/php/g' ${path}",
+  command => "sed -i 's/phpp/php/g' ${path_file}",
   path    => ['/bin','/usr/bin']
 }
